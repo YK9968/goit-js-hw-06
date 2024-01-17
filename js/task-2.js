@@ -7,14 +7,14 @@ class Storage {
     this.#items = items;
   }
   getItems() {
-    return this.#items;
+    this.#items;
   }
   addItem(newItem) {
-    return this.#items.push(newItem);
+    this.#items.push(newItem);
   }
   removeItem(itemToRemove) {
     const newItems = this.#items.filter(item => item !== itemToRemove);
-    return (this.#items = newItems);
+    this.#items = newItems;
   }
 }
 const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
